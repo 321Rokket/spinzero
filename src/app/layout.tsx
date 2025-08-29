@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import Sidebar from '@/components/layout/Sidebar'
+import MobileNav from '@/components/layout/MobileNav'
+import SearchPopup from '@/components/layout/SearchPopup'
+import Preloader from '@/components/layout/Preloader'
+import Scripts from '@/components/Scripts'
 
 export const metadata: Metadata = {
   title: "Baosh || Responsive HTML 5 Template",
@@ -44,7 +51,24 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/responsive.css" />
       </head>
       <body>
-        {children}
+        <Preloader />
+        
+        <div className="page-wrapper">
+          <Sidebar />
+          <Header />
+          
+          <div className="stricky-header stricky-header--one stricked-menu main-menu">
+            <div className="sticky-header__content"></div>
+          </div>
+          
+          {children}
+          
+          <Footer />
+        </div>
+        
+        <MobileNav />
+        <SearchPopup />
+        <Scripts />
       </body>
     </html>
   );

@@ -3,45 +3,60 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-This is a static HTML landing page project using the "Baosh" responsive HTML template. The project contains static HTML files with associated CSS, JavaScript, and PHP contact form functionality.
+This is a Next.js 13+ application using the App Router, converted from the "Baosh" responsive HTML template. The project uses a YAML-driven architecture where schemas are the single source of truth for all content and configuration.
 
 ## Project Structure
 ```
-templates/baosh-package-files/1_baosh-html-files/
-├── assets/                 # Static assets
-│   ├── css/               # Stylesheets (style.css, responsive.css)
-│   ├── images/            # All images organized by category
-│   ├── js/                # Custom JavaScript (custom.js)
-│   ├── vendors/           # Third-party libraries (Bootstrap, jQuery, etc.)
-│   └── inc/               # PHP includes (PHPMailer, sendemail.php)
-├── *.html                 # HTML pages (index.html, about.html, etc.)
-docs/                      # Documentation directory (empty)
-schemas/                   # Schema files directory (empty)
-tests/                     # Test directory (empty)
+src/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx         # Global app shell (header, footer, etc.)
+│   └── page.tsx           # Homepage content
+├── components/
+│   ├── layout/            # App shell components
+│   ├── sections/          # Reusable section components
+│   └── ui/                # UI atoms
+├── lib/                   # Utilities and YAML loader
+schemas/                   # YAML schemas (source of truth)
+├── site-structure.yaml    # Navigation and site config
+├── content-sections.yaml  # Page content data
+├── page-templates.yaml    # Page layout definitions
+└── component-definitions.yaml # Component specifications
+public/assets/             # Static assets from template
+docs/                      # Architecture documentation
+templates/                 # Original HTML templates (reference)
 ```
 
 ## Technology Stack
-- **Frontend**: Static HTML5, CSS3, JavaScript (ES6+)
-- **CSS Framework**: Bootstrap 5
+- **Framework**: Next.js 15.5.2 with App Router
+- **Language**: TypeScript 5
+- **CSS Framework**: Bootstrap 5 + Tailwind CSS 4
 - **JavaScript Libraries**: jQuery 3.6.0, Swiper, AOS animations, GSAP
-- **Backend**: PHP with PHPMailer for contact forms
-- **Deployment**: Docker support via Dockerfile
+- **Data Management**: YAML schemas with js-yaml parser
+- **Deployment**: Docker support via multi-stage Dockerfile
 
 ## Key Files
-- `templates/baosh-package-files/1_baosh-html-files/index.html` - Main landing page
-- `templates/baosh-package-files/1_baosh-html-files/assets/css/style.css` - Primary stylesheet
-- `templates/baosh-package-files/1_baosh-html-files/assets/js/custom.js` - Custom JavaScript functionality
-- `templates/baosh-package-files/1_baosh-html-files/assets/inc/sendemail.php` - Contact form processing
+- `src/app/layout.tsx` - Global app shell with navigation and footer
+- `src/app/page.tsx` - Homepage content
+- `src/lib/yaml-loader.ts` - YAML parser with TypeScript interfaces
+- `schemas/*.yaml` - All content and configuration (source of truth)
 
-## Development Notes
-- This is a template-based project with static HTML files
-- No package.json or Node.js build process - files are served directly
-- PHP contact form requires SMTP configuration in sendemail.php
-- All vendor libraries are included locally in assets/vendors/
-- The project uses jQuery as the primary JavaScript framework
+## Development Commands
+```bash
+npm run dev -- -p 3005    # Development server on port 3005
+npm run build             # Production build
+npm run lint              # ESLint checking
+npm run start             # Production server
+```
 
-## Contact Form Configuration
-The contact form uses PHPMailer and requires SMTP configuration in `assets/inc/sendemail.php`:
-- Configure SMTP_EMAIL and SMTP_PASSWORD constants
-- Set RECIPIENT_EMAIL for form submissions
-- Ensure PHPMailer dependencies are properly included
+## Architecture Principles
+1. **YAML-Driven**: All content and configuration in YAML schemas
+2. **Component-Based**: Reusable components from templates
+3. **Server-First**: Default to server components, use client only when needed
+4. **Type-Safe**: TypeScript interfaces generated from YAML schemas
+
+## Important Pages to Create
+See `docs/06-complete-page-checklist.md` for exhaustive list of all required pages to prevent 404s.
+
+## GitHub Repository
+Repository: 321Rokket/spinzero
+Branch: main
