@@ -1,0 +1,147 @@
+components:
+  layout:
+    header:
+      type: "main-header-one"
+      elements:
+        - navigation_menu
+        - logo
+        - user_actions
+        - search_toggle
+        - cart_icon
+        - sidebar_toggle
+      
+    footer:
+      type: "footer-one"
+      elements:
+        - logo
+        - contact_info
+        - footer_menu
+        - social_links
+        - copyright
+        - scroll_to_top
+    
+    sidebar:
+      type: "xs-sidebar-group"
+      elements:
+        - about_snippet
+        - quote_form
+        - contact_info
+        - social_links
+    
+    mobile_nav:
+      type: "mobile-nav__wrapper"
+      elements:
+        - logo
+        - navigation_menu
+        - contact_info
+        - social_links
+
+  sections:
+    hero_slider:
+      component: "MainSlider"
+      props:
+        - slides
+        - autoplay
+        - navigation
+        - pagination
+    
+    brand_showcase:
+      component: "BrandSection"
+      props:
+        - brands
+        - layout_type
+    
+    about_section:
+      component: "AboutSection"
+      props:
+        - tagline
+        - title
+        - description
+        - cta_button
+        - background_elements
+    
+    services_grid:
+      component: "ServicesGrid"
+      props:
+        - title
+        - description
+        - services
+        - layout_columns
+    
+    portfolio_grid:
+      component: "PortfolioGrid"
+      props:
+        - projects
+        - filter_categories
+        - layout_type
+    
+    team_grid:
+      component: "TeamGrid" 
+      props:
+        - members
+        - layout_style
+        - cta_button
+    
+    testimonials_carousel:
+      component: "TestimonialsCarousel"
+      props:
+        - testimonials
+        - autoplay
+        - navigation
+    
+    blog_preview:
+      component: "BlogPreview"
+      props:
+        - articles
+        - layout_style
+        - show_count
+    
+    contact_form:
+      component: "ContactForm"
+      props:
+        - fields
+        - validation_rules
+        - submit_endpoint
+    
+    statistics_counter:
+      component: "StatsCounter"
+      props:
+        - counters
+        - animation_trigger
+        - count_speed
+
+  ui:
+    button:
+      component: "Button"
+      variants:
+        - thm-btn
+        - outline-btn
+        - text-btn
+      props:
+        - text
+        - url
+        - variant
+        - size
+    
+    section_title:
+      component: "SectionTitle"
+      props:
+        - tagline
+        - title
+        - description
+        - alignment
+        - animation_style
+    
+    image_gallery:
+      component: "ImageGallery"
+      props:
+        - images
+        - layout_type
+        - lightbox_enabled
+    
+    social_links:
+      component: "SocialLinks"
+      props:
+        - platforms
+        - style_variant
+        - icon_set

@@ -1,0 +1,212 @@
+sections:
+  hero_slider:
+    type: "slider"
+    slides:
+      - id: 1
+        background_image: "/assets/images/slides/slider-v1-bg.jpg"
+        hero_image: "/assets/images/slides/slider-v1-img1.jpg"
+        title: "Things creative everyday"
+        social_links:
+          - { platform: "facebook", label: "Fb." }
+          - { platform: "twitter", label: "Tw." }
+          - { platform: "instagram", label: "In." }
+          - { platform: "behance", label: "Be." }
+  
+  brands:
+    type: "brand_showcase"
+    brands:
+      - id: 1
+        name: "Brand 1"
+        logo: "/assets/images/brand/brand-1-1.png"
+        url: "#"
+      - id: 2
+        name: "Brand 2" 
+        logo: "/assets/images/brand/brand-1-2.png"
+        url: "#"
+      - id: 3
+        name: "Brand 3"
+        logo: "/assets/images/brand/brand-1-3.png"
+        url: "#"
+      - id: 4
+        name: "Brand 4"
+        logo: "/assets/images/brand/brand-1-4.png"
+        url: "#"
+      - id: 5
+        name: "Brand 5"
+        logo: "/assets/images/brand/brand-1-5.png"
+        url: "#"
+  
+  about:
+    type: "about_section"
+    tagline: "about us"
+    title: "We creative best high services & bold solutions for your business growth"
+    cta:
+      text: "Explore More"
+      url: "/contact"
+  
+  services:
+    type: "services_grid"
+    tagline: "what we do"
+    title: "Agency Services We Provide"
+    description: "Mestib ulligula remove the politices project completed marketing reserch abusiness high level process consultation for business."
+    items:
+      - id: 1
+        icon: "icon-writing"
+        title: "Content Writings & Marketing"
+        description: "Mestib ulligula remov project complete marketing reserch to abusiness high process"
+        number: "01"
+      - id: 2
+        icon: "icon-web-design"
+        title: "Graphic & Sketches Designing"
+        description: "Mestib ulligula remov project complete marketing reserch to abusiness high process"
+        number: "02"
+      - id: 3
+        icon: "icon-development"
+        title: "Website Design And Development"
+        description: "Mestib ulligula remov project complete marketing reserch to abusiness high process"
+        number: "03"
+  
+  gallery:
+    type: "portfolio_grid"
+    tagline: "our gallery"
+    title: "Latest Showcase"
+    items:
+      - id: 1
+        type: "image"
+        image: "/assets/images/gallery/gallery-v1-img1.jpg"
+        url: "#"
+      - id: 2
+        type: "content"
+        title: "Product Design"
+        description: "Mestib ulligula to remove the projects completed market reserch abusines high process"
+        number: "01"
+        url: "#"
+      - id: 3
+        type: "image"
+        image: "/assets/images/gallery/gallery-v1-img2.jpg"
+        url: "#"
+      - id: 4
+        type: "image"
+        image: "/assets/images/gallery/gallery-v1-img3.jpg"
+        url: "#"
+      - id: 5
+        type: "content"
+        title: "The Brightest"
+        description: "Mestib ulligula to remove the projects completed market reserch abusines high process"
+        number: "02"
+        url: "#"
+      - id: 6
+        type: "image"
+        image: "/assets/images/gallery/gallery-v1-img4.jpg"
+        url: "#"
+
+  counters:
+    type: "statistics"
+    items:
+      - value: 2
+        suffix: "k"
+        label: "Expert Members"
+      - value: 213
+        suffix: ""
+        label: "Award Winners"
+      - value: 1
+        suffix: "k"
+        label: "Happy Clients"
+      - value: 12
+        suffix: "k"
+        label: "Cup of Tea"
+
+  testimonials:
+    type: "testimonials_carousel"
+    tagline: "Testimonials"
+    title: "Our Expert Clients"
+    cta:
+      text: "Client Feedback"
+      url: "/contact"
+    items:
+      - id: 1
+        name: "Ramitas Malika"
+        position: "Co-Founder"
+        content: "Dolor massa, a pellentesque nulla congue quis fusce convallis diam. Nam torister tempor faucibus imperdiet feli sed, vestibulligula. remove the politices for this projects marketing reserch business high levels in the process we try to best consultations in our work for futures.."
+        rating: 5
+        avatar: "/assets/images/testimonial/testimonials-v1-img1.png"
+
+  awards:
+    type: "awards_carousel"
+    tagline: "we proud that"
+    title: "Discover Our Awards"
+    items:
+      - id: 1
+        icon: "icon-dribbble-1"
+        year: "2012-2023"
+        title: "Best Development Awards 2022"
+        organization: "Dribble Awards"
+        number: "01"
+      - id: 2
+        icon: "icon-medal"
+        year: "2015-2018"
+        title: "Mobile of the Month, July 2014"
+        organization: "Awards Inc"
+        number: "02"
+      - id: 3
+        icon: "icon-social"
+        year: "2012-2013"
+        title: "Year Best Interactive Awards"
+        organization: "Behance Award"
+        number: "03"
+
+  team:
+    type: "team_grid"
+    tagline: "our professionals"
+    title: "Dedicated Our Team"
+    cta:
+      text: "View More Details"
+      url: "/contact"
+    members:
+      - id: 1
+        name: "Tomas Whites"
+        position: "Designer"
+        image: "/assets/images/team/team-v1-img1.jpg"
+        offset_class: ""
+      - id: 2
+        name: "Tomas Whites"
+        position: "Designer"
+        image: "/assets/images/team/team-v1-img2.jpg"
+        offset_class: "mt40"
+      - id: 3
+        name: "Tomas Whites"
+        position: "Designer"
+        image: "/assets/images/team/team-v1-img3.jpg"
+        offset_class: "mt80"
+
+  blog:
+    type: "blog_preview"
+    tagline: "our insights"
+    title: "Our Latest Article & New Updates"
+    description: "Mestib ulligulia remove projects completed the marketing reserch to abusiness high process our work in high level."
+    articles:
+      - id: 1
+        date: "Oct 2023"
+        title: "Worldwides annual spends on digital advertising"
+        category: "Digital Agency"
+        author: "Rason Toy"
+        url: "#"
+      - id: 2
+        date: "Nov 2023"
+        title: "The secret of change is to focus all your energy"
+        category: "Agency/business"
+        author: "Rason Toy"
+        url: "#"
+      - id: 3
+        date: "Sep 2023"
+        title: "A Simple Social Media Marketing Checklist"
+        category: "Digital Agency"
+        author: "Rason Toy"
+        url: "#"
+
+  cta:
+    type: "call_to_action"
+    title: "Get In Touch"
+    button:
+      text: "Send A Message"
+      url: "/contact"

@@ -1,0 +1,90 @@
+page_templates:
+  home:
+    layout: "default"
+    sections:
+      - "hero_slider"
+      - "brands"
+      - "about"
+      - "advantages" 
+      - "counters"
+      - "services"
+      - "gallery"
+      - "testimonials"
+      - "awards"
+      - "team"
+      - "blog"
+      - "cta"
+    
+  about:
+    layout: "default"
+    sections:
+      - "page_header"
+      - "about_content"
+      - "team"
+      - "counters"
+      - "cta"
+  
+  services:
+    layout: "default"
+    sections:
+      - "page_header"
+      - "services_grid"
+      - "advantages"
+      - "testimonials"
+      - "cta"
+  
+  portfolio:
+    layout: "default"
+    sections:
+      - "page_header"
+      - "portfolio_grid"
+      - "portfolio_carousel"
+      - "cta"
+  
+  team:
+    layout: "default"
+    sections:
+      - "page_header"
+      - "team_grid"
+      - "team_carousel"
+      - "cta"
+  
+  blog:
+    layout: "default"
+    sections:
+      - "page_header"
+      - "blog_grid"
+      - "blog_sidebar"
+  
+  contact:
+    layout: "default"
+    sections:
+      - "page_header"
+      - "contact_form"
+      - "contact_info"
+      - "map"
+  
+  pricing:
+    layout: "default"
+    sections:
+      - "page_header"
+      - "pricing_tables"
+      - "faq"
+      - "cta"
+  
+  faq:
+    layout: "default"
+    sections:
+      - "page_header"
+      - "faq_accordion"
+      - "contact_info"
+      - "cta"
+
+layouts:
+  default:
+    header: true
+    footer: true
+    sidebar: true
+    mobile_nav: true
+    search_popup: true
+    preloader: true

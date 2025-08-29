@@ -1,6 +1,11 @@
 import Scripts from '@/components/Scripts'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import { getContentSections } from '@/lib/yaml-loader'
 
 export default function Home() {
+  const content = getContentSections()
+  
   return (
     <>
       {/* Start Preloader */}
@@ -24,6 +29,8 @@ export default function Home() {
       {/* End Preloader */}
 
       <div className="page-wrapper">
+        <Header />
+
         {/* Start sidebar widget content */}
         <div className="xs-sidebar-group info-group info-sidebar">
           <div className="xs-overlay xs-bg-black"></div>
@@ -109,147 +116,6 @@ export default function Home() {
           </div>
         </div>
         {/* End sidebar widget content */}
-
-        {/*Start Main Header One*/}
-        <header className="main-header main-header-one">
-          <div className="main-header-one__inner">
-            <nav className="main-menu main-menu-one">
-              <div className="main-menu__wrapper clearfix">
-                <div className="auto-container">
-                  <div className="main-menu__wrapper-inner">
-                    <div className="main-menu-box">
-                      <a href="#" className="mobile-nav__toggler">
-                        <i className="fa fa-bars"></i>
-                      </a>
-
-                      <ul className="main-menu__list">
-                        <li className="dropdown current">
-                          <a href="index.html">Home</a>
-                          <ul>
-                            <li>
-                              <a href="index.html">Home One</a>
-                            </li>
-                            <li><a href="index-2.html">Home Two</a></li>
-                            <li className="dropdown">
-                              <a href="#">One Pages</a>
-                              <ul>
-                                <li><a href="index-one-page.html">One Page Style1</a></li>
-                                <li>
-                                  <a href="index2-one-page.html">One Page Style2</a>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-
-                        <li>
-                          <a href="about.html">About</a>
-                        </li>
-
-                        <li className="dropdown">
-                          <a href="#">Services</a>
-                          <ul>
-                            <li><a href="services.html">Services</a></li>
-                            <li>
-                              <a href="agriculture-services.html">Agriculture Services</a>
-                            </li>
-                            <li>
-                              <a href="graphic-design.html">Graphic Design</a>
-                            </li>
-                            <li>
-                              <a href="delivery-services.html">Delivery Services</a>
-                            </li>
-                            <li>
-                              <a href="farming-products.html">Farming Products</a>
-                            </li>
-                          </ul>
-                        </li>
-
-                        <li className="dropdown">
-                          <a href="#">Pages</a>
-                          <ul>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
-                            <li>
-                              <a href="portfolio-details.html">Portfolio Details</a>
-                            </li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="team-carousel.html">Team Carousel</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                            <li><a href="testimonial.html">Testimonial</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="404.html">404 Error</a></li>
-                            <li><a href="coming-soon.html">Coming Soon Page</a></li>
-                          </ul>
-                        </li>
-
-                        <li className="dropdown">
-                          <a href="#">Blog</a>
-                          <ul>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-carousel.html">Blog Carousel</a></li>
-                            <li><a href="blog-list.html">Blog List</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                          </ul>
-                        </li>
-
-                        <li>
-                          <a href="contact.html">Contact</a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="main-header-one__middle">
-                      <div className="logo-box-one">
-                        <a href="index.html">
-                          <img src="/assets/images/resources/logo-1.png" alt="Awesome Logo" title="" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="main-header-one__right">
-                      <ul className="Reg-login-box">
-                        <li>
-                          <a href="#">Register</a>
-                        </li>
-                        <li>
-                          <a href="#">Login</a>
-                        </li>
-                      </ul>
-
-                      <div className="header-search-box">
-                        <a href="#"
-                          className="main-menu__search search-toggler icon-search-interface-symbol">
-                        </a>
-                      </div>
-
-                      <div className="header-cart-box">
-                        <a href="#">
-                          <i className="icon-bag"></i>
-                          <span className="count">3</span>
-                        </a>
-                      </div>
-
-                      <div className="side-content-button-box">
-                        <div className="side-content-button">
-                          <a className="navSidebar-button" href="#">
-                            <span className="icon-menu"></span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </header>
-        {/*End Main Header One*/}
-
-        <div className="stricky-header stricky-header--one stricked-menu main-menu">
-          <div className="sticky-header__content"></div>
-        </div>
 
         {/*Start Main Slider */}
         <section className="main-slider main-slider-one">
@@ -391,87 +257,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/*Start Footer One */}
-        <footer className="footer-one">
-          <div className="footer">
-            <div className="container">
-              <div className="footer-one__inner">
-                <div className="logo-box text-center">
-                  <a href="index.html"><img src="/assets/images/resources/logo-1.png" alt="#" /></a>
-                </div>
-
-                <div className="footer-one__contact">
-                  <div className="footer-one__contact-bdr"
-                    style={{backgroundImage: 'url(/assets/images/footer/footer-v1-img1.png)'}}></div>
-                  <ul>
-                    <li>
-                      <div className="icon-box">
-                        <span className="icon-ringing"></span>
-                      </div>
-
-                      <div className="text-box">
-                        <p>Call anytime</p>
-                        <h3><a href="tel:98210009630">+ 9821 (000) - 9630</a></h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div className="icon-box">
-                        <span className="icon-message"></span>
-                      </div>
-
-                      <div className="text-box">
-                        <p>Send email</p>
-                        <h3><a href="mailto:yourmail@email.com">baosh@company.com</a></h3>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div className="icon-box">
-                        <span className="icon-placeholder"></span>
-                      </div>
-
-                      <div className="text-box">
-                        <p>Visit Office</p>
-                        <h3>27 Division St, New York</h3>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="footer-one__menu">
-                  <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Home</a></li>
-                  </ul>
-                </div>
-
-                <div className="footer-one__social-links">
-                  <ul>
-                    <li><a href="#"><span className="icon-twitter"></span></a></li>
-                    <li><a href="#"><span className="icon-facebook"></span></a></li>
-                    <li><a href="#"><span className="icon-google-plus-logo"></span></a></li>
-                    <li><a href="#"><span className="icon-pinterest"></span></a></li>
-                    <li><a href="#"><span className="icon-wifi"></span></a></li>
-                  </ul>
-                  <div className="border-box"></div>
-                </div>
-
-                <div className="footer-one__copyright">
-                  <p>Copyright © 2023 all rights reserved.</p>
-                </div>
-
-                <div className="scroll-to-top-box">
-                  <a href="#" data-target="html" className="scroll-to-target scroll-to-top">Back to Top</a>
-                  <div className="border-box"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-        {/*End Footer One*/}
+        <Footer />
       </div>
       <Scripts />
     </>
