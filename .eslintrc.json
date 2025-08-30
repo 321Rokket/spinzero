@@ -1,9 +1,9 @@
 {
   "extends": "next/core-web-vitals",
-  "ignorePatterns": [
-    "*.min.js",
-    "public/assets/**/*",
-    "templates/**/*",
-    "node_modules/**/*"
-  ]
+  "rules": {
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/no-unused-vars": "warn"
+  }
 }

@@ -223,11 +223,22 @@ export function getContentSections(): ContentSections {
   return loadYamlFile<ContentSections>('content-sections.yaml');
 }
 
+interface PageTemplates {
+  page_templates: Record<string, {
+    layout: string;
+    sections: string[];
+  }>;
+}
+
+interface ComponentDefinitions {
+  components: Record<string, unknown>;
+}
+
 export function getPageTemplate(template: string) {
-  const templates = loadYamlFile<any>('page-templates.yaml');
+  const templates = loadYamlFile<PageTemplates>('page-templates.yaml');
   return templates.page_templates[template];
 }
 
 export function getComponentDefinitions() {
-  return loadYamlFile<any>('component-definitions.yaml');
+  return loadYamlFile<ComponentDefinitions>('component-definitions.yaml');
 }
