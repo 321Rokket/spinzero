@@ -27,9 +27,9 @@ templates/                 # Original HTML templates (reference)
 ```
 
 ## Technology Stack
-- **Framework**: Next.js 15.5.2 with App Router
+- **Framework**: Next.js 15.5.2 with App Router and Turbopack
 - **Language**: TypeScript 5
-- **CSS Framework**: Bootstrap 5 + Tailwind CSS 4
+- **CSS Framework**: Bootstrap 5 + Tailwind CSS 4  
 - **JavaScript Libraries**: jQuery 3.6.0, Swiper, AOS animations, GSAP
 - **Data Management**: YAML schemas with js-yaml parser
 - **Deployment**: Docker support via multi-stage Dockerfile
@@ -44,9 +44,9 @@ templates/                 # Original HTML templates (reference)
 
 ## Development Commands
 ```bash
-npm run dev -- -p 3005    # Development server on port 3005
-npm run build             # Production build
-npm run lint              # ESLint checking
+npm run dev               # Development server with Turbopack (port 3000)
+npm run build             # Production build with Turbopack  
+npm run lint              # ESLint checking (has warnings from vendor files)
 npm run start             # Production server
 ```
 
@@ -57,13 +57,15 @@ npm run start             # Production server
 4. **Type-Safe**: TypeScript interfaces generated from YAML schemas
 
 ## Current Status
-- **Pages Created**: 23/28 complete (see `docs/06-complete-page-checklist.md`)
-- **Build Status**: ✅ Success - all pages generated as static (SSG)
+- **Pages Created**: 23 pages complete, 5 missing (see `docs/06-complete-page-checklist.md`)
+- **Build Status**: ✅ Success - all 23 pages generated as static (SSG)  
 - **Script Loading**: ✅ Fixed - jQuery loads sequentially before plugins
-- **TypeScript**: ✅ No type errors
+- **TypeScript**: ✅ No build errors (ignoreBuildErrors: false)
 - **Architecture**: ✅ App shell properly separated in layout.tsx
 
 ## Known Issues
+- ESLint has 6177 problems (mainly from vendor JS files in public/assets)
+- Missing pages: `/home-two`, `/one-page`, `/one-page-alt`, `/not-found`, `/register`
 - ESLint warnings for `<a>` tags (should use Next.js `<Link>`)
 - Image optimization warnings (should use Next.js `<Image>`)
 - Need to extract reusable section components from templates
