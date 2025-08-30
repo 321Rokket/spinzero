@@ -42,6 +42,15 @@ next-env.d.ts
 
 # OS
 Thumbs.db
+.DS_Store
+**/.DS_Store
+
+# AI Coder files
+.cursor/
+.cursorrules
+.continue/
+.aider*
+.copilot*
 
 # Logs
 logs
